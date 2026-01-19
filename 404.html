@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/full-stack-course/">
-    <script>
-      // For client-side routers (like React Router)
-      var redirectTo = '/full-stack-course' + window.location.pathname.replace('/full-stack-course', '') + window.location.search + window.location.hash;
-      window.location.replace(redirectTo);
+    <script type="text/javascript">
+      // GitHub Pages SPA redirect script
+      // This will redirect all 404s to index.html and preserve the path for React Router
+      (function() {
+        var l = window.location;
+        var pathname = l.pathname;
+        // Only redirect if not already at the root
+        if (!pathname.endsWith('/index.html') && pathname !== '/full-stack-course/' && pathname !== '/full-stack-course') {
+          var newUrl = '/full-stack-course/index.html?redirect=' + encodeURIComponent(pathname + l.search + l.hash);
+          window.location.replace(newUrl);
+        }
+      })();
     </script>
   </head>
   <body>
