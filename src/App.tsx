@@ -1,12 +1,14 @@
 import './App.css'
+import { Route, Routes } from 'react-router'
+import Home from './pages/Home'
 import GitWorkflow from './pages/GitWorkflow'
 
 function App() {
   return (
-    <>
-      <h1>This repository is under construction</h1>
-      <GitWorkflow />  
-    </>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="git-github" element={<GitWorkflow />}>Git & GitHub</Route>
+      </Routes>
   )
 }
 
