@@ -1,4 +1,3 @@
-import { Link } from 'react-router';
 import gitBranch1 from '../assets/git-branch1.png';
 import gitBranch2 from '../assets/git-branch2.png';
 
@@ -145,11 +144,31 @@ const GitWorkflow = () => {
 
                 <div className='title'>Resources:</div>
                 <ul>
-                    <li><Link className='external-link' to={{ pathname: "https://docs.github.com/en/get-started/git-basics/set-up-git"}} target='_blank'>Set up Git</Link></li>
-                    <li><Link className='external-link' to={{ pathname: "https://cli.github.com/"}} target='_blank'>GitHub CLI</Link></li>
-                    <li><Link className='external-link' to={{ pathname: "https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github"}} target='_blank'>Adding Locally Hosted Code to GitHub</Link></li>
+                    <li><a className='external-link' href="https://docs.github.com/en/get-started/git-basics/set-up-git" target='_blank' rel="noopener noreferrer">Set up Git</a></li>
+                    <li><a className='external-link' href="https://cli.github.com/" target='_blank' rel="noopener noreferrer">GitHub CLI</a></li>
+                    <li><a className='external-link' href="https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github" target='_blank' rel="noopener noreferrer">Adding Locally Hosted Code to GitHub</a></li>
                 </ul>
 
+            </div>
+
+            <div>
+                <h2 className='title'>Classroom Solution</h2>
+                <ul>
+                    <li>First set up Git & connect it to GitHub using the <a className='external-link' href='https://docs.github.com/en/get-started/git-basics/set-up-git' target='_blank' rel="noopener noreferrer">link</a>. This is needed to use Git & use GitHub.</li>
+                    <li>Set up Git CLI using the <a className='external-link' href="https://cli.github.com/" target='_blank' rel="noopener noreferrer">link</a>. This is needed to create repositories and manage them from the command line.</li>
+
+                    <li>Create a new directory (folder) in your local machine</li>
+                    <li>Open the directory in your VS Code</li>
+                    <li>Open a terminal in the root directory</li>
+                    <li>Initialize a git repository in the directory using the <span className='code-block'>git init -b main</span> command.</li> This will create a new git repository with the main branch.
+                    <li>Create a README.md file in the root directory and add some content to it.</li>
+                    <li>Stage the changes using the <span className='code-block'>git add README.md</span> command.</li>
+                    <li>Commit the changes using the <span className='code-block'>git commit -m "Initial commit"</span> command.</li>
+                    <li>Add the local repository to GitHub using the <span className='code-block'>gh repo create</span> command. Follow the prompts to create a new repository on GitHub and link it to your local repository.</li>
+                    <li>Make some changes to the README.md file.</li>
+                    <li>Stage and commit the changes using the <span className='code-block'>git add .</span> and <span className='code-block'>git commit -m "Updated README"</span> commands.</li>
+                    <li>Push the changes to GitHub using the <span className='code-block'>git push origin main</span> command.</li>
+                </ul>
             </div>
 
             <div className='mt-40'>
