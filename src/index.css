@@ -14,25 +14,39 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
   color: #535bf2;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #242424;
+  background: #e0e7ff;
+  border-radius: 4px;
+  padding: 2px 6px;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.6rem;
   line-height: 1.1;
+  font-weight: 700;
+  color: #646cff;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2em;
+  margin-bottom: 0.7em;
+  color: #535bf2;
 }
 
 button {
