@@ -1,5 +1,11 @@
 import gitBranch1 from '../assets/git-branch1.png';
 import gitBranch2 from '../assets/git-branch2.png';
+import PR1 from '../assets/pr1.png';
+import PR2 from '../assets/pr2.png';
+import PR3 from '../assets/pr3.png';
+import PR5 from '../assets/pr5.png';
+import PR6 from '../assets/pr6.png';
+import PR7 from '../assets/pr7.png';
 
 const GitWorkflow = () => {
     return (
@@ -228,23 +234,69 @@ const GitWorkflow = () => {
 
                 <p className='stress'>Assignment 2 - Collaborating on a story</p>
                 <ul>
-                    <li>Make a group of two or three people.</li>
-                    <li>Create a new repository and practice branching and merging.</li>
-                    <li>The first person will create a repository and invite others as collaborators. Follow the method shared in the <span className='stress'>classroom solution</span> section.</li>
+                    <li className='mt-8'>Make a group of two or three people.</li>
+                    <li className='mt-8'>Create a new repository and practice branching and merging.</li>
+                    <li className='mt-8'>The first person will create a repository and invite others as collaborators. Follow the method shared in the <span className='stress'>classroom solution</span> section.</li>
                         <ul>
                             <li>Go to settings section in the repository in GitHub.</li>
                             <li>Add collaborators by their GitHub usernames or email addresses.</li>
                         </ul>
-                    <li>The first person will checkout from the <span className='code-block'>main branch</span> using the <span className='code-block'>git checkout -b branch1</span></li>
-                    <li>Create a <span className='code-block'>story.md</span> file and add some changes to the file</li>
-                    <li>Stage and commit the changes</li>
+                    <li className='mt-8'>The first person will checkout from the <span className='code-block'>main branch</span> using the <span className='code-block'>git checkout -b branch1</span></li>
+                    <li className='mt-8'>Create a <span className='code-block'>story.md</span> file and add some changes to the file</li>
+                    <li className='mt-8'>Stage and commit the changes</li>
                         <ul>
                             <li><span className='code-block'>git add .</span></li>
                             <li><span className='code-block'>git commit -m "Added story part 1"</span></li>
                         </ul>
-                    <li>Push the changes to GitHub using <span className='code-block'>git push origin branch1</span></li>
-                    <li>Create a Pull Request to merge the changes into the main branch.</li>
-                    
+                    <li className='mt-8'>Push the changes to GitHub using <span className='code-block'>git push origin branch1</span></li>
+                    <li className='mt-8'>Create a Pull Request to merge the changes into the main branch.</li>
+                        <ul>
+                            <li>Go to the repository on GitHub.</li>
+                            <li>Click on the <span className='stress'>Pull requests</span> tab.</li>
+                            <li>Click on the <span className='stress'>New pull request</span> button.</li>
+                            <li>Select the <span className='stress'>branch you created (branch1)</span> as the source branch and <span className='stress'>main</span> as the target branch.</li>
+                            <li>Add reviewers - the people you invited as collaborators.</li>
+                            <li>Click on <span className='stress'>Create pull request</span>.</li>
+                        </ul>
+                    <div className='mt-20'>
+                        <img src={PR1} />
+                    </div>
+
+                    <div className='mt-20'>
+                        <img src={PR2} />
+                    </div>
+
+                    <div className='mt-20'>
+                        <img src={PR3} />
+                    </div>
+
+                    <li className='mt-40'>The second person will review the PR and approve the changes.</li>
+                    <div className='mt-20'>
+                        <img src={PR5} />
+                    </div>
+
+                    <li className='mt-40'> Once the PR is approved, the author will merge the changes. Here author means the person who created the PR.</li>
+                    <div className='mt-20'>
+                        <img src={PR6} />   
+                    </div>
+
+                    <li className='mt-20'>Once the above is done, changes are merged into the main branch.</li>
+
+                    <li className='mt-8'>The second person will then pull the latest main branch changes and checkout to the new branch and make update to the story.</li>
+                        <ul>
+                            <li><span >Clone the repository using <code className='code-block'>git clone [repository-url]</code></span></li>
+
+                            <div className='mt-20'>
+                                <img src={PR7} />
+                            </div>
+
+                            <li className='mt-8'><span>Switch to main branch using <code className='code-block'>git checkout main</code></span></li>
+                            <li className='mt-8'><span>Pull the latest changes using <code className='code-block'>git pull origin main</code></span></li>
+                            <li className='mt-8'>Checkout from the main branch using the <code className='code-block'>git checkout -b branch2</code> command.</li>
+                            <li className='mt-8'>Make changes to the <code className='code-block'>story.md</code> file.</li>
+                            <li className='mt-8'>Stage and commit the changes.</li>
+                            <li className='mt-8'>Follow the same process of opening a Pull Request and getting it reviewed and merged.</li>
+                        </ul>
                 </ul>
             </div>
         </div>
