@@ -216,6 +216,37 @@ const GitWorkflow = () => {
                     <li>Unclear PR requests - unclear titles/descriptions/lack of evidences</li>
                 </ul>
             </div>
+
+            <div className='mt-40'>
+                <h2 className='title'>Assignment</h2>
+
+                <p className="stress">Assignment 1</p>
+                <ul>
+                    <li>Practice what you've learned about Git workflows and branching strategies.</li>
+                    <li>Learn Git commands and concepts in depth.</li>
+                </ul>
+
+                <p className='stress'>Assignment 2 - Collaborating on a story</p>
+                <ul>
+                    <li>Make a group of two or three people.</li>
+                    <li>Create a new repository and practice branching and merging.</li>
+                    <li>The first person will create a repository and invite others as collaborators. Follow the method shared in the <span className='stress'>classroom solution</span> section.</li>
+                        <ul>
+                            <li>Go to settings section in the repository in GitHub.</li>
+                            <li>Add collaborators by their GitHub usernames or email addresses.</li>
+                        </ul>
+                    <li>The first person will checkout from the <span className='code-block'>main branch</span> using the <span className='code-block'>git checkout -b branch1</span></li>
+                    <li>Create a <span className='code-block'>story.md</span> file and add some changes to the file</li>
+                    <li>Stage and commit the changes</li>
+                        <ul>
+                            <li><span className='code-block'>git add .</span></li>
+                            <li><span className='code-block'>git commit -m "Added story part 1"</span></li>
+                        </ul>
+                    <li>Push the changes to GitHub using <span className='code-block'>git push origin branch1</span></li>
+                    <li>Create a Pull Request to merge the changes into the main branch.</li>
+                    
+                </ul>
+            </div>
         </div>
     )
 }
