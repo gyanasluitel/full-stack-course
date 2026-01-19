@@ -22,6 +22,11 @@ const Home = () => {
                             <td><NavLink to="git-github">Git & GitHub Workflow</NavLink></td>
                             <td>Learn version control and collaboration using Git and GitHub.</td>
                         </tr>
+
+                        <tr>
+                            <td><NavLink to="git-revise-branching">Git Revise & Branching</NavLink></td>
+                            <td>Recap on yesterday's Git concepts and exploring branching in deep.</td>
+                        </tr>
                     </tbody>                
                 </table>
             </div>

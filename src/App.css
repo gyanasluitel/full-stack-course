@@ -56,7 +56,11 @@
 .flex {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .code-block {
