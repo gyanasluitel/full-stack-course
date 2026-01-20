@@ -27,6 +27,11 @@ const Home = () => {
                             <td><NavLink to="git-revise-branching">Git Revise & Branching</NavLink></td>
                             <td>Recap on yesterday's Git concepts and exploring branching in deep.</td>
                         </tr>
+
+                        <tr>
+                            <td><NavLink to="type-script-tutorial">TypeScript Tutorial</NavLink></td>
+                            <td>Introduction to TypeScript, its features, and benefits over JavaScript.</td>
+                        </tr>
                     </tbody>                
                 </table>
             </div>

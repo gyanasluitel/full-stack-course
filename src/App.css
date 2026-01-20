@@ -73,6 +73,14 @@
   font-weight: 400;
 }
 
+.mt-4 {
+  margin-top: 4px;
+}
+
+.mt-6 {
+  margin-top: 6px;
+}
+
 .mt-8 {
   margin-top: 8px;
 }
