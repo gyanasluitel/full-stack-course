@@ -66,11 +66,6 @@
 .code-block {
   font-family: 'Fira Code', monospace;
   font-size: 0.95rem;
-  font-weight: 700;
-}
-
-.code-block__light {
-  font-weight: 400;
 }
 
 .mt-4 {
@@ -87,6 +82,10 @@
 
 .mt-20 {
   margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
 }
 
 .mt-40 {
@@ -106,4 +105,8 @@ img {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.fw-600 {
+  font-weight: 600;
 }
