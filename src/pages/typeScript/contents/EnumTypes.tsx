@@ -1,4 +1,4 @@
-import LineBreak from "../../../components/LineBreak";
+import CodeBlock from "../../../components/CodeBlock";
 
 const EnumTypes = () => {
     return (
@@ -9,7 +9,8 @@ const EnumTypes = () => {
                 <li>Enums (short for Enumerations) are a way to define a set of named constants.</li>
                 <li>They provide a way to group related values together and give them meaningful names.</li>
                 <li className="mt-6"><span className="stress">Example 1 (Numberic Enum):</span>
-                <pre><code className="code-block">{`enum Direction {
+
+                <CodeBlock code={`enum Direction {
     Up,
     Down,
     Left,
@@ -19,12 +20,12 @@ const EnumTypes = () => {
 let move: Direction = Direction.Up;
 console.log("Move Direction: " + move); // 0
 move = Direction.Left;
-console.log("Move Direction: " + move); // 2`}</code></pre>
+console.log("Move Direction: " + move); // 2`} />
                 </li>
 
-                <LineBreak />
                 <li className="mt-6"><span className="stress">Example 2 (String Enum):</span>
-                <pre><code className="code-block">{`enum Role {
+
+                <CodeBlock code={`enum Role {
     Admin = "admin",
     Student = "student"
 }
@@ -36,7 +37,8 @@ console.log("User Role: " + userRole); // "admin"
 userRole = Role.Student;
 console.log("User Role: " + userRole); // "student"
 
-// userRole = "guest"; // This will cause a TypeScript error`}</code></pre></li>
+// userRole = "guest"; // This will cause a TypeScript error`} />
+                <pre><code className="code-block"></code></pre></li>
 
                 <li className="mt-20"><span className="stress">Pros of Enums:</span></li>
                 <ul>

@@ -7,6 +7,7 @@
   box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
   backdrop-filter: blur(2px);
   border: 1px solid rgba(255,255,255,0.12);
+  overflow: auto;
 }
 
 .table-contents {
@@ -61,6 +62,13 @@
 
 .flex-col {
   flex-direction: column;
+}
+
+.code-area {
+  background-color: rgb(201, 199, 182);
+  padding: 8px 20px;
+  border-radius: 4px;
+  overflow: auto;
 }
 
 .code-block {

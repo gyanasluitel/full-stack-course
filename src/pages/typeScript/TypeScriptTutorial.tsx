@@ -42,8 +42,6 @@ const TypeScriptTutorial = () => {
             <EnumTypes />
 
             <UnknownType />
-
-            {/* <Generics /> */}
         </div>
     )
 }

@@ -1,3 +1,5 @@
+import CodeBlock from "../../../../components/CodeBlock";
+
 const ParameterTypeAnnotations = () => {
     return (
         <div className="mt-20">
@@ -6,11 +8,11 @@ const ParameterTypeAnnotations = () => {
                 <li>When you define a function, you can specify the types of its parameters.</li>
                 <li>This helps ensure that the function is called with the correct type of arguments.</li>
                 <li className="mt-6"><span className="stress">Example:</span>
-                    <pre><code className="code-block">{`function greet(name: string) {
+                <CodeBlock code={`function greet(name: string) {
     console.log('Hello, ' + name + '!');
 }
 
-greet("Harry Potter");`}</code></pre>
+greet("Harry Potter");`} />
                 </li>
             </ul>
         </div>

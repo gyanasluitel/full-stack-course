@@ -1,3 +1,4 @@
+import CodeBlock from "../../../../components/CodeBlock"
 import TypeVsInterface from "./TypeVsInterface"
 
 const ObjectAndTypeAliases = () => {
@@ -25,7 +26,8 @@ const InlineObjectTypes = () => {
             <h3 className="title">a. Inline Object Types</h3>
                 <p>You can define the shape of an object using an inline type annotation.</p>
                 <p className="stress">Example:</p>
-                <pre><code className="code-block">{`const printUser = (user: { name: string; age: number, isTeacher?: boolean}) => {
+
+                <CodeBlock code={`const printUser = (user: { name: string; age: number, isTeacher?: boolean}) => {
     console.log('My name is ' + user.name);
 
     console.log('I am ' + user.age + ' years old');
@@ -33,7 +35,7 @@ const InlineObjectTypes = () => {
     console.log('I am a ' + (user.isTeacher ? "teacher" : "student"));
 }
 
-printUser({ name: "Gyanas", age: 50});`}</code></pre>
+printUser({ name: "Gyanas", age: 50});`}/>
         </div>
     )
 }
@@ -44,7 +46,8 @@ const TypeAlias = () => {
             <h3 className="title">b. Type Aliases</h3>
             <p>Type aliases allow you to create a new name for a type, making your code more readable and reusable. Doing this allows us to use the same type more than once and refer to it by a single name.</p>
             <p className="stress">Example:</p>
-            <pre><code className="code-block">{`type User = {
+
+            <CodeBlock code={`type User = {
     name: string;
     age: number;
     isTeacher?: boolean;
@@ -58,7 +61,7 @@ const printUser = (user: User) => {
     console.log("I am a " + (user.isTeacher ? "teacher" : "student"));
 }
 
-printUser({ name: "Gyanas", age: 50, isTeacher: true });`}</code></pre>
+printUser({ name: "Gyanas", age: 50, isTeacher: true });`} />
         </div>
     )
 }
@@ -69,7 +72,8 @@ const Interface = () => {
             <h3 className="title">c. Interfaces</h3>
             <p>Interfaces are another way to define the shape of an object in TypeScript. They are similar to type aliases but have some additional features, such as the ability to extend other interfaces.</p>
             <p className="stress">Example:</p>
-            <pre><code className="code-block">{`interface User {
+
+            <CodeBlock code={`interface User {
     name: string;
     age: number;
     isTeacher?: boolean;
@@ -83,7 +87,7 @@ const printUser = (user: User) => {
     console.log("I am a " + (user.isTeacher ? "teacher" : "student"));
 }
 
-printUser({ name: "Gyanas", age: 50, isTeacher: true });`}</code></pre>
+printUser({ name: "Gyanas", age: 50, isTeacher: true });`} />
         </div>
     )
 }

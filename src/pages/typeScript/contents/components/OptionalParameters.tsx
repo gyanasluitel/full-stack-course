@@ -1,4 +1,4 @@
-import LineBreak from "../../../../components/LineBreak";
+import CodeBlock from "../../../../components/CodeBlock";
 
 const OptionalParameters = () => {
     return (
@@ -9,7 +9,7 @@ const OptionalParameters = () => {
                 <li>In TypeScript, you can mark parameters as optional by adding a question mark (?) after the parameter name.</li>
                 <li>This indicates that the parameter may or may not be provided when the function is called.</li>
                 <li className="mt-6"><span className="stress">Example 1:</span>
-                <pre><code className="code-block">{`function greet(name: string, greeting?: string): string {
+                <CodeBlock code={`function greet(name: string, greeting?: string): string {
     if (greeting) {
         return \`\${greeting}, \${name}!\`;
     } else {
@@ -18,18 +18,17 @@ const OptionalParameters = () => {
 }
 
 console.log(greet("Ram")); // Output: "Hello, Ram!"
-console.log(greet("Sita", "Good morning")); // Output: "Good morning, Sita!"`}</code></pre>
+console.log(greet("Sita", "Good morning")); // Output: "Good morning, Sita!"`} />
                 </li>
 
-                <LineBreak />
-
                 <li className="mt-6"><span className="stress">Example 2:</span>
-                <pre><code className="code-block">{`function log(message: string, userId?: string) {
+                <CodeBlock code={`function log(message: string, userId?: string) {
     console.log(message, userId ?? "");
 }
 
 log("User logged in");
-log("User logged in", "user123");`}</code></pre></li>
+log("User logged in", "user123");`} />
+                </li>
             </ul>
         </div>
     )

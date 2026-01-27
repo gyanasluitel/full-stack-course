@@ -32,6 +32,11 @@ const Home = () => {
                             <td><NavLink to="type-script-tutorial">TypeScript Tutorial</NavLink></td>
                             <td>Introduction to TypeScript, its features, and benefits over JavaScript.</td>
                         </tr>
+
+                        <tr>
+                            <td><NavLink to="type-script-tutorial-2">TypeScript Tutorial Continue</NavLink></td>
+                            <td>Continuation of TypeScript concepts and advanced topics.</td>
+                        </tr>
                     </tbody>                
                 </table>
             </div>

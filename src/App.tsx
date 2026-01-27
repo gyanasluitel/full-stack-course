@@ -5,10 +5,11 @@ import Home from './pages/Home';
 import GitWorkflow from './pages/git/GitWorkflow';
 import GitReviseAndBranching from './pages/git/GitReviseAndBranching';
 import TypeScriptTutorial from './pages/typeScript/TypeScriptTutorial';
+import TypeScriptTutorial2 from './pages/typeScript/TypeScriptTutorial2';
 
 function App() {
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const redirect = params.get('redirect');
@@ -25,6 +26,7 @@ function App() {
       <Route path="git-github" element={<GitWorkflow />}>Git & GitHub</Route>
       <Route path="git-revise-branching" element={<GitReviseAndBranching />}>Git Revise & Branching</Route>
       <Route path="type-script-tutorial" element={<TypeScriptTutorial />}>TypeScript Tutorial</Route>
+      <Route path="type-script-tutorial-2" element={<TypeScriptTutorial2 />}>TypeScript Tutorial Continue</Route>
     </Routes>
   );
 }
