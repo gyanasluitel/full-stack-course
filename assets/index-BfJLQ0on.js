@@ -563,7 +563,7 @@ export default defineConfig({
       overlay: true,    // Show overlay for errors
     },
   },
-});`})]}),a.jsxs(_,{children:["Install React, with ",a.jsx("code",{className:"code-block fw-600",children:"npm install react react-dom"})]}),a.jsxs(_,{children:["Install TypeScript types for React with ",a.jsx("code",{className:"code-block fw-600",children:"npm install --save-dev @types/react @types/react-dom"})]}),a.jsxs(_,{children:["Update the ",a.jsx("code",{className:"code-block fw-600",children:"package.json"})," to add a dev script:",a.jsx(G,{code:`"scripts": {
+});`})]}),a.jsxs(_,{children:["Install React, with ",a.jsx("code",{className:"code-block fw-600",children:"npm install react react-dom"})]}),a.jsxs(_,{children:["Install TypeScript types for React with ",a.jsx("code",{className:"code-block fw-600",children:"npm install --save-dev typescript @types/react @types/react-dom"})]}),a.jsxs(_,{children:["Update the ",a.jsx("code",{className:"code-block fw-600",children:"package.json"})," to add a dev script:",a.jsx(G,{code:`"scripts": {
   "dev": "vite",
   "build": "vite build",
   "preview": "vite preview"
