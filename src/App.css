@@ -118,3 +118,8 @@ img {
 .fw-600 {
   font-weight: 600;
 }
+
+.list-item {
+  margin-top: 6px;
+}
+

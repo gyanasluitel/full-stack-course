@@ -7,6 +7,7 @@ import GitReviseAndBranching from './pages/git/GitReviseAndBranching';
 import TypeScriptTutorial from './pages/typeScript/TypeScriptTutorial';
 import TypeScriptTutorial2 from './pages/typeScript/TypeScriptTutorial2';
 import AsyncProgramming from './pages/asyncProgramming/AsyncProgramming';
+import ReactTutorial from './pages/react/ReactTutorial';
 
 function App() {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ function App() {
       <Route path="type-script-tutorial" element={<TypeScriptTutorial />}>TypeScript Tutorial</Route>
       <Route path="type-script-tutorial-2" element={<TypeScriptTutorial2 />}>TypeScript Tutorial Continue</Route>
       <Route path="async-programming" element={<AsyncProgramming />}>Asynchronous Programming</Route>
+      <Route path="react-tutorial" element={<ReactTutorial />} >React Tutorial</Route>
     </Routes>
   );
 }

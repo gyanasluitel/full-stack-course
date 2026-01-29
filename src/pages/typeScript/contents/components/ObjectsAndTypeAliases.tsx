@@ -1,4 +1,4 @@
-import CodeBlock from "../../../../components/CodeBlock"
+import CodeBlock from "../../../../common/CodeBlock"
 import TypeVsInterface from "./TypeVsInterface"
 
 const ObjectAndTypeAliases = () => {

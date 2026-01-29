@@ -1,5 +1,4 @@
-import CodeBlock from "../../../../components/CodeBlock";
-import LineBreak from "../../../../components/LineBreak";
+import CodeBlock from "../../../../common/CodeBlock";
 
 const ReturnTypeAnnotations = () => {
     return (
@@ -18,7 +17,6 @@ console.log(greetingMessage);`}  />
 
                 <p>This ensures that the <span className="stress">function always returns a string</span>, and any <span className="stress">deviation</span> will result in a <span className="stress">TypeScript error</span>.</p>
 
-                <LineBreak />
                 <li className="mt-20"><span className="stress">Example 2:</span>
                 <CodeBlock code={`function greet(name: string): number {
     return ("Hello, " + name + "!");

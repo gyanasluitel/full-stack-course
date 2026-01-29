@@ -1,16 +1,16 @@
-import LinearGitFlow from "../../assets/linearGitFlow.png";
-import branching1 from "../../assets/branching1.png";
-import branching2 from "../../assets/branching2.png";
-import branching3 from "../../assets/branching3.png";
-import branching4 from "../../assets/branching4.png";
-import fastForwardMerge from "../../assets/fast-forward-merge.png";
-import ffMerged from "../../assets/ff-merged.png";
-import threeWayBefore from "../../assets/threeWayBefore.png";
-import threeWayAfter from "../../assets/threeWayAfter.png";
-import squashAndMergeBefore from "../../assets/squashAndMergeBefore.png";
-import squashAndMergeAfter from "../../assets/squashAndMergeAfter.png";
-import rebaseAndMergeBefore from "../../assets/rebaseAndMergeBefore.png";
-import rebaseAndMergeAfter from "../../assets/rebaseAndMergeAfter.png";
+import LinearGitFlow from "../../assets/git/linearGitFlow.png";
+import fastForwardMerge from "../../assets/git/fast-forward-merge.png";
+import branching1 from "../../assets/git/branching1.png";
+import branching2 from "../../assets/git/branching2.png";
+import branching3 from "../../assets/git/branching3.png";
+import branching4 from "../../assets/git/branching4.png";
+import ffMerged from "../../assets/git/ff-merged.png";
+import threeWayBefore from "../../assets/git/threeWayBefore.png";
+import threeWayAfter from "../../assets/git/threeWayAfter.png";
+import squashAndMergeBefore from "../../assets/git/squashAndMergeBefore.png";
+import squashAndMergeAfter from "../../assets/git/squashAndMergeAfter.png";
+import rebaseAndMergeBefore from "../../assets/git/rebaseAndMergeBefore.png";
+import rebaseAndMergeAfter from "../../assets/git/rebaseAndMergeAfter.png";
 
 const GitReviseAndBranching = () => {
     return (

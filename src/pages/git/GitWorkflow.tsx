@@ -1,11 +1,11 @@
-import gitBranch1 from '../../assets/git-branch1.png';
-import gitBranch2 from '../../assets/git-branch2.png';
-import PR1 from '../../assets/pr1.png';
-import PR2 from '../../assets/pr2.png';
-import PR3 from '../../assets/pr3.png';
-import PR5 from '../../assets/pr5.png';
-import PR6 from '../../assets/pr6.png';
-import PR7 from '../../assets/pr7.png';
+import gitBranch1 from '../../assets/git/git-branch1.png';
+import gitBranch2 from '../../assets/git/git-branch2.png';
+import PR1 from '../../assets/git/pr1.png';
+import PR2 from '../../assets/git/pr2.png';
+import PR3 from '../../assets/git/pr3.png';
+import PR5 from '../../assets/git/pr5.png';
+import PR6 from '../../assets/git/pr6.png';
+import PR7 from '../../assets/git/pr7.png';
 
 const GitWorkflow = () => {
     return (

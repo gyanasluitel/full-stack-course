@@ -1,4 +1,4 @@
-import CodeBlock from "../../../../components/CodeBlock";
+import CodeBlock from "../../../../common/CodeBlock";
 
 const DefaultParameters = () => {
     return (

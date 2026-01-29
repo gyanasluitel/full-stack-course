@@ -42,6 +42,13 @@ const Home = () => {
                             <td><NavLink to="async-programming">Asynchronous Programming</NavLink></td>
                             <td>Understanding asynchronous programming in JavaScript/TypeScript.</td>
                         </tr>
+
+                        <tr>
+                            <td>
+                                <NavLink to="react-tutorial">React</NavLink>
+                            </td>
+                            <td>Build user interfaces using React library.</td>
+                        </tr>
                     </tbody>                
                 </table>
             </div>

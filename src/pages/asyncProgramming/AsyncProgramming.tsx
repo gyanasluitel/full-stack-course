@@ -1,5 +1,5 @@
-import EventLoop from "../../assets/eventLoop.png";
-import CodeBlock from "../../components/CodeBlock";
+import EventLoop from "../../assets/async/eventLoop.png";
+import CodeBlock from "../../common/CodeBlock";
 
 const AsyncProgramming = () => {
     return (
