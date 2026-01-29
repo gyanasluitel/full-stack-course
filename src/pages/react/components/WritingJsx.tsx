@@ -45,7 +45,7 @@ export default defineConfig({
                     </ListItem>
 
                     <ListItem>Install React, with <code className="code-block fw-600">npm install react react-dom</code></ListItem>
-                    <ListItem>Install TypeScript types for React with <code className="code-block fw-600">npm install --save-dev @types/react @types/react-dom</code></ListItem>
+                    <ListItem>Install TypeScript types for React with <code className="code-block fw-600">npm install --save-dev typescript @types/react @types/react-dom</code></ListItem>
 
                     <ListItem>Update the <code className="code-block fw-600">package.json</code> to add a dev script:
                         <CodeBlock code={`"scripts": {
