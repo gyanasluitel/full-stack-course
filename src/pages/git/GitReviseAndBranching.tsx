@@ -11,10 +11,13 @@ import squashAndMergeBefore from "../../assets/git/squashAndMergeBefore.png";
 import squashAndMergeAfter from "../../assets/git/squashAndMergeAfter.png";
 import rebaseAndMergeBefore from "../../assets/git/rebaseAndMergeBefore.png";
 import rebaseAndMergeAfter from "../../assets/git/rebaseAndMergeAfter.png";
+import NavButton from "src/common/NavButton";
 
 const GitReviseAndBranching = () => {
     return (
         <div className="container">
+            <NavButton to="/" text="Home" />
+
             <h1>Recap on yesterday's Git concepts</h1>
 
             <p>We installed and configured git in our machine, connected Git with GitHub. Installed GitHub CLI (used to create repository in GitHub using command line)</p>

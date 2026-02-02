@@ -1,0 +1,21 @@
+.assignment-box {
+  background: linear-gradient(90deg, #fffde7 0%, #e3f2fd 100%);
+  border-left: 6px solid #ffb300;
+  padding: 18px 24px;
+  margin: 32px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 179, 0, 0.08);
+}
+
+.assignment-title {
+  color: #ffb300;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.assignment-content {
+  color: #333;
+  font-size: 1.05rem;
+}

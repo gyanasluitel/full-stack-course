@@ -1,3 +1,4 @@
+import NavButton from '../../common/NavButton';
 import gitBranch1 from '../../assets/git/git-branch1.png';
 import gitBranch2 from '../../assets/git/git-branch2.png';
 import PR1 from '../../assets/git/pr1.png';
@@ -10,6 +11,8 @@ import PR7 from '../../assets/git/pr7.png';
 const GitWorkflow = () => {
     return (
         <div className="container">
+            <NavButton to="/" text="Home" />
+
             <h1>Git & GitHub</h1>
 
             <div>

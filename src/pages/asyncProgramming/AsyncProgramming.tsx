@@ -1,9 +1,12 @@
+import NavButton from "src/common/NavButton";
 import EventLoop from "../../assets/async/eventLoop.png";
 import CodeBlock from "../../common/CodeBlock";
 
 const AsyncProgramming = () => {
     return (
         <div className="container">
+            <NavButton to="/" text="Home" />
+
             <h1>Asynchronous Programming in JavaScript/TypeScript</h1>
 
             <div>

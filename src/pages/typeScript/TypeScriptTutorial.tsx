@@ -1,3 +1,4 @@
+import NavButton from "src/common/NavButton";
 import BasicTypes from "./contents/BasicTypes";
 import ObjectAndTypeAliases from "./contents/components/ObjectsAndTypeAliases";
 import EnumTypes from "./contents/EnumTypes";
@@ -11,10 +12,14 @@ import TypeInference from "./contents/TypeInference";
 import TypeScriptBenefits from "./contents/TypeScriptBenefits";
 import UnionAndLiteralTypes from "./contents/UnionAndLiteralTypes";
 import UnknownType from "./contents/UnkownType";
+import TypeScriptUtilities from "./contents/TypeScriptUtility";
+import Generics from "./contents/Generics";
 
 const TypeScriptTutorial = () => {
     return (
         <div className="container">
+            <NavButton to="/" text="Home" />
+
             <h1>Why TypeScript?</h1>
 
             <JavaScriptIssues />
@@ -42,6 +47,10 @@ const TypeScriptTutorial = () => {
             <EnumTypes />
 
             <UnknownType />
+
+            <Generics />
+
+            <TypeScriptUtilities />
         </div>
     )
 }
