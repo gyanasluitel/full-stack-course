@@ -9,7 +9,14 @@ import AsyncProgramming from './pages/asyncProgramming/AsyncProgramming';
 import ReactTutorial from './pages/react/ReactTutorial';
 import ReactBasics from './pages/react/ReactBasics';
 import FirstReactApp from './pages/react/FirstReactApp';
-import ReactTodoApp from './pages/react/ReactTodoApp';
+// import ReactTodoApp from './pages/react/ReactTodoApp';
+import BudgetTrackerApp from './pages/react/BudgetTrackerApp';
+import ReactHooks from './pages/react/ReactHooks';
+import BudgetTrackerAppLocalStorage from './pages/react/BudgetTrackerAppLocalStorage';
+import BudgetTrackerCustomHook from './pages/react/BudgetTrackerCustomHook';
+import Routing from './pages/react/Routing';
+import BudgetTrackerRouting from './pages/react/BudgetTrackerRouting';
+import ReactStateManagement from './pages/react/ReactStateManagement';
 
 function App() {
   const navigate = useNavigate();
@@ -35,7 +42,21 @@ function App() {
         <Route index element={<ReactTutorial />} />
         <Route path="basics" element={<ReactBasics />} />
         <Route path="first-react-app" element={<FirstReactApp />} />
-        <Route path="todo-app" element={<ReactTodoApp />} />
+        {/* <Route path="todo-app" element={<ReactTodoApp />} /> */}
+        <Route path="budget-tracker-app" element={<BudgetTrackerApp />} />
+        <Route path="react-hooks" element={<ReactHooks />} />
+        <Route path="budget-tracker-app-localStorage" element={<BudgetTrackerAppLocalStorage />} />
+        <Route path="budget-tracker-app-customHooks" element={<BudgetTrackerCustomHook />} />
+        <Route path="routing" element={<Routing />} />
+        <Route path="budget-tracker-routing" element={<BudgetTrackerRouting />} />
+        <Route path="react-state-management" element={<ReactStateManagement />} />
+
+        <Route path="*" element={
+          <div style={{ padding: '2rem' }}>
+            <h1>404 - Page Not Found</h1>
+            <p>The page you are looking for does not exist.</p>
+          </div>
+        } />
       </Route>
     </Routes>
   );

@@ -28,9 +28,44 @@ const ReactTutorial = () => {
                         <td>Build your first React application (a simple counter app)</td>
                     </tr>
 
-                    <tr>
+                    {/* <tr>
                         <td><NavLink to="todo-app">Todo App</NavLink></td>
                         <td>Build a Todo application to practice React concepts</td>
+                    </tr> */}
+
+                    <tr>
+                        <td><NavLink to="budget-tracker-app">Budget Tracker App</NavLink></td>
+                        <td>Build a simple budget tracker app to manage your finances</td>
+                    </tr>
+
+                    <tr>
+                        <td><NavLink to="react-hooks">React Hooks</NavLink></td>
+                        <td>Learn about React Hooks and how to use them</td>
+                    </tr>
+
+                    <tr>
+                        <td><NavLink to="budget-tracker-app-localStorage">Budget Tracker App - store data in localStorage</NavLink></td>
+                        <td>Learn how to store and fetch data from localStorage</td>
+                    </tr>
+
+                    <tr>
+                        <td><NavLink to="budget-tracker-app-customHooks">Budget Tracker App - customHooks</NavLink></td>
+                        <td>Use custom hook in the app to centralize logic and state management</td>
+                    </tr>
+
+                    <tr>
+                        <td><NavLink to="routing">Routing</NavLink></td>
+                        <td>Learn about React Router and how to implement routing in your React applications</td>
+                    </tr>
+
+                    <tr>
+                        <td><NavLink to="budget-tracker-routing">Budget Tracker App - Routing</NavLink></td>
+                        <td>Learn how to implement routing in the Budget Tracker app using React Router</td>
+                    </tr>
+
+                    <tr>
+                        <td><NavLink to="react-state-management">React State Management</NavLink></td>
+                        <td>Learn about state management in React and how to manage state effectively in your React applications</td>
                     </tr>
                 </tbody>                
             </table>
