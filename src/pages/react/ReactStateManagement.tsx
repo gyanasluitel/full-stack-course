@@ -1,4 +1,5 @@
 import ListItem from "src/common/ListItem";
+import RepoLink from "src/common/RepoLink";
 
 const ReactStateManagement = () => {
     return (
@@ -34,6 +35,28 @@ const ReactStateManagement = () => {
                     </ListItem>
                 </ul>
             </div>
+
+            <div>
+                <h2>Components of Context API</h2>
+
+                <ul>
+                    <ListItem><span className="stress">React.createContext()</span>: This function is used to create a new context. It returns an object with two components: <span className="stress">Provider</span> and <span className="stress">Consumer</span>.</ListItem>
+                    <ListItem><span className="stress">Provider</span>: This component is used to provide the context value to its child components. It accepts a prop called <span className="stress">value</span>, which is the data that you want to share across your application.</ListItem>
+                    <ListItem><span className="stress">Consumer</span>: This component is used to consume the context value provided by the Provider. It uses a render prop pattern to access the context value and render the appropriate UI based on that value.</ListItem>
+                </ul>
+            </div>
+            
+            <div>
+                <h2>How to use Context API</h2>
+                <p>To use Context API in your React application, you need to follow these steps:</p>
+                <ul>
+                    <ListItem>Create a context using <span className="stress">React.createContext()</span> and export it.</ListItem>
+                    <ListItem>Wrap your application with the <span className="stress">Provider</span> component and pass the context value as a prop.</ListItem>
+                    <ListItem>Use the <span className="stress">Consumer</span> component or the <span className="stress">useContext</span> hook to consume the context value in your child components.</ListItem>
+                </ul>
+            </div>
+
+            <RepoLink link="https://github.com/gyanasluitel/theme-context" name="Theme Context Switching App" codeText="You can see the repo here for ThemeContext" />
         </div>
     )
 }
