@@ -1,11 +1,14 @@
 import Assignment from "src/common/Assignment";
 import CodeBlock from "src/common/CodeBlock";
 import ListItem from "src/common/ListItem";
+import NavButton from "src/common/NavButton";
 import RepoLink from "src/common/RepoLink";
 
 const ReactHooks = () => {
     return (
         <div className="container">
+            <NavButton to="/react-tutorial" text="React Tutorial" />
+
             <h1>React Hooks</h1>
 
             <div>

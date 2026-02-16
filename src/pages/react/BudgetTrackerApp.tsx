@@ -5,10 +5,13 @@ import BudgetTrackerViz from "./components/budgetTracker/BudgetTrackerViz";
 import ProjectSetup from "./components/budgetTracker/ProjectSetup";
 import ResetBudgetTrackerStyling from "./components/budgetTracker/ResetBudgetTrackerStyling";
 import BudgetForm from "./components/budgetTracker/BudgetForm";
+import NavButton from "src/common/NavButton";
 
 const BudgetTrackerApp = () => {
     return (
         <div className="container">
+            <NavButton to="/react-tutorial" text="React Tutorial" />
+        
             <div>
                 <h1>Budget Tracker App</h1>
                 <p>This is a simple budget tracker app built with React. It allows you to track your income and expenses, and see your current balance.</p>

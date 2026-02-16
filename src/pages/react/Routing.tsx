@@ -1,10 +1,13 @@
 import Assignment from "src/common/Assignment";
 import CodeBlock from "src/common/CodeBlock";
 import ListItem from "src/common/ListItem";
+import NavButton from "src/common/NavButton";
 
 const Routing = () => {
     return (
         <div className="container">
+            <NavButton to="/react-tutorial" text="React Tutorial" />
+
             <h1>React Router</h1>
 
             <p>In this lesson, we will be learning about React Router, a popular library for handling routing in React applications.</p>

@@ -1,10 +1,13 @@
 import CodeBlock from "src/common/CodeBlock";
 import ListItem from "src/common/ListItem";
+import NavButton from "src/common/NavButton";
 import RepoLink from "src/common/RepoLink";
 
 const BudgetTrackerCustomHook = () => {
     return (
         <div className="container">
+            <NavButton to="/react-tutorial" text="React Tutorial" />
+
             <h1>Budget Tracker App - Custom Hook</h1>
 
             <p>In this lesson, we will be refactoring the budget tracker app to use a custom hook for managing state and logic.</p>

@@ -1,9 +1,13 @@
+import CodeBlock from "src/common/CodeBlock";
 import ListItem from "src/common/ListItem";
+import NavButton from "src/common/NavButton";
 import RepoLink from "src/common/RepoLink";
 
 const ReactStateManagement = () => {
     return (
         <div className="container">
+            <NavButton to="/react-tutorial" text="React Tutorial" />
+
             <h1>React State Management</h1>
             <p>In this section, we will learn about state management in React and how to manage state effectively in your React applications.</p>
 
@@ -44,6 +48,47 @@ const ReactStateManagement = () => {
                     <ListItem><span className="stress">Provider</span>: This component is used to provide the context value to its child components. It accepts a prop called <span className="stress">value</span>, which is the data that you want to share across your application.</ListItem>
                     <ListItem><span className="stress">Consumer</span>: This component is used to consume the context value provided by the Provider. It uses a render prop pattern to access the context value and render the appropriate UI based on that value.</ListItem>
                 </ul>
+
+                <p>For example, let's say we want to create a simple counter using Context API. We can create a context for the counter value and provide it to our components.</p>
+                <CodeBlock code={`import React, { createContext, useState } from 'react';
+
+// Create a context for the counter value
+const CounterContext = createContext();
+
+const CounterProvider = ({ children }) => {
+  const [counter, setCounter] = useState(0);
+
+  return (
+    <CounterContext.Provider value={{ counter, setCounter }}>
+      {children}
+    </CounterContext.Provider>
+  );
+};
+
+const CounterDisplay = () => {
+  const { counter } = React.useContext(CounterContext);
+  return <h1>Counter: {counter}</h1>;
+};
+
+const CounterButtons = () => {
+  const { setCounter } = React.useContext(CounterContext);
+  return (
+    <div>
+      <button onClick={() => setCounter(prev => prev + 1)}>Increment</button>
+      <button onClick={() => setCounter(prev => prev - 1)}>Decrement</button>
+    </div>
+  );
+};
+
+const App = () => {
+  return (<CounterProvider>
+    <CounterDisplay />
+    <CounterButtons />
+  </CounterProvider>);
+};
+
+export default App;`} language="jsx" />
+                
             </div>
             
             <div>

@@ -17,6 +17,7 @@ import BudgetTrackerCustomHook from './pages/react/BudgetTrackerCustomHook';
 import Routing from './pages/react/Routing';
 import BudgetTrackerRouting from './pages/react/BudgetTrackerRouting';
 import ReactStateManagement from './pages/react/ReactStateManagement';
+import BudgetTrackerContext from './pages/react/BudgetTrackerContext';
 
 function App() {
   const navigate = useNavigate();
@@ -50,6 +51,7 @@ function App() {
         <Route path="routing" element={<Routing />} />
         <Route path="budget-tracker-routing" element={<BudgetTrackerRouting />} />
         <Route path="react-state-management" element={<ReactStateManagement />} />
+        <Route path="budget-tracker-context" element={<BudgetTrackerContext />} />
 
         <Route path="*" element={
           <div style={{ padding: '2rem' }}>

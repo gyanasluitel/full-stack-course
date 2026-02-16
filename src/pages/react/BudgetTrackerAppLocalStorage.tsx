@@ -1,10 +1,13 @@
 import CodeBlock from "src/common/CodeBlock";
 import ListItem from "src/common/ListItem";
+import NavButton from "src/common/NavButton";
 import RepoLink from "src/common/RepoLink";
 
 const BudgetTrackerAppLocalStorage = () => {
     return (
         <div className="container">
+            <NavButton to="/react-tutorial" text="React Tutorial" />
+
             <h1>Budget Tracker App - Local Storage</h1>
 
             <p>In this lesson, we will be working on the budget tracker app to read and write data to the browser's local storage.</p>
