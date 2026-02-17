@@ -72,6 +72,11 @@ const ReactTutorial = () => {
                         <td><NavLink to="budget-tracker-context">Budget Tracker App - Context API</NavLink></td>
                         <td>Learn how to use Context API in the Budget Tracker app to manage state more effectively across the entire application</td>
                     </tr>
+
+                    <tr>
+                        <td><NavLink to="react-redux-tutorial">React Redux Tutorial</NavLink></td>
+                        <td>Learn about Redux, a popular state management library for React applications, and how to use it effectively in your React applications</td>
+                    </tr>
                 </tbody>                
             </table>
             <Outlet />

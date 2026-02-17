@@ -87,7 +87,7 @@ const App = () => {
   </CounterProvider>);
 };
 
-export default App;`} language="jsx" />
+export default App;`} />
                 
             </div>
             

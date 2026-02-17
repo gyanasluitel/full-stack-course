@@ -18,6 +18,7 @@ import Routing from './pages/react/Routing';
 import BudgetTrackerRouting from './pages/react/BudgetTrackerRouting';
 import ReactStateManagement from './pages/react/ReactStateManagement';
 import BudgetTrackerContext from './pages/react/BudgetTrackerContext';
+import ReactReduxTutorial2 from './pages/react/ReactReduxTutorial2';
 
 function App() {
   const navigate = useNavigate();
@@ -52,6 +53,7 @@ function App() {
         <Route path="budget-tracker-routing" element={<BudgetTrackerRouting />} />
         <Route path="react-state-management" element={<ReactStateManagement />} />
         <Route path="budget-tracker-context" element={<BudgetTrackerContext />} />
+        <Route path="react-redux-tutorial" element={<ReactReduxTutorial2 />} />
 
         <Route path="*" element={
           <div style={{ padding: '2rem' }}>
