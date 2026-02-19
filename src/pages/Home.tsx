@@ -44,6 +44,11 @@ const Home = () => {
                             </td>
                             <td>Build user interfaces using React library.</td>
                         </tr>
+
+                        <tr>
+                            <td><NavLink to="backend-basics">Backend Basics</NavLink></td>
+                            <td>Backend & Node Fundamentals</td>
+                        </tr>
                     </tbody>                
                 </table>
             </div>

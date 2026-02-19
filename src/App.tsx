@@ -19,6 +19,7 @@ import BudgetTrackerRouting from './pages/react/BudgetTrackerRouting';
 import ReactStateManagement from './pages/react/ReactStateManagement';
 import BudgetTrackerContext from './pages/react/BudgetTrackerContext';
 import ReactReduxTutorial2 from './pages/react/ReactReduxTutorial2';
+import BackendBasics from './pages/backend/BackendBasics';
 
 function App() {
   const navigate = useNavigate();
@@ -54,7 +55,6 @@ function App() {
         <Route path="react-state-management" element={<ReactStateManagement />} />
         <Route path="budget-tracker-context" element={<BudgetTrackerContext />} />
         <Route path="react-redux-tutorial" element={<ReactReduxTutorial2 />} />
-
         <Route path="*" element={
           <div style={{ padding: '2rem' }}>
             <h1>404 - Page Not Found</h1>
@@ -62,6 +62,7 @@ function App() {
           </div>
         } />
       </Route>
+      <Route path="backend-basics" element={<BackendBasics />} />
     </Routes>
   );
 }
