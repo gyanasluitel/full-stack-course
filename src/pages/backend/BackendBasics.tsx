@@ -203,6 +203,8 @@ const BackendBasics = () => {
                         <ListItem><span className="stress">outDir: </span>Specifies the output directory for compiled JavaScript files.</ListItem>
                         <ListItem><span className="stress">rootDir: </span>Specifies the root directory of your TypeScript source files.</ListItem>
                         <ListItem><span className="stress">strict: </span>Enables strict type-checking options for better code quality and error detection.</ListItem>
+                        <ListItem><span className="stress">include: </span>Specifies which files to include in the compilation process.</ListItem>
+                        <ListItem><span className="stress">exclude: </span>Specifies which files to exclude from the compilation process.</ListItem>
                     </ul>
                     </ListItem>
 
@@ -232,6 +234,12 @@ const BackendBasics = () => {
     "typescript": "^5.9.3"
   }
 }`} />
+                    <ul>
+                        <ListItem><span className="stress">build: </span>Compiles TypeScript files to JavaScript using the TypeScript compiler.</ListItem>
+                        <ListItem><span className="stress">clean: </span>Removes the compiled JavaScript files from the output directory.</ListItem>
+                        <ListItem><span className="stress">start: </span>Builds the project and then runs the compiled JavaScript file using Node.js.</ListItem>
+                        <ListItem><span className="stress">dev: </span>Runs the TypeScript files directly in development mode using ts-node-dev, which automatically restarts the server on file changes.</ListItem>
+                    </ul>
                     </ListItem>
                 </ul>
 
@@ -248,6 +256,10 @@ app.listen(PORT, () => {
 })
 
 export default app;`} />
+
+                    <ul>
+                        <ListItem>This code sets up a basic Express server that listens on port 4000 and logs a message when the server is running.</ListItem>
+                    </ul>
                 </ListItem>
             </div>
         </div>
