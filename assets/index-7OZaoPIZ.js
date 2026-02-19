@@ -2097,7 +2097,6 @@ export default Counter;`}),a.jsx("ul",{children:a.jsxs(d,{children:["In this com
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^25.3.0",
-    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }
