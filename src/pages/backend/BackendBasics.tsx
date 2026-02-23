@@ -119,7 +119,95 @@ const BackendBasics = () => {
             </div>
 
             <div>
-                <h2>Creating our First Server</h2>
+                <h2>Writing a simple Hello World application with Node.js</h2>
+
+                <ul>
+                    <ListItem>Create a new directory for your project: 
+                        <CodeBlock code="mkdir my-first-node-app" />
+                    </ListItem>
+                    <ListItem>Initialize a new Node.js project using 
+                        <CodeBlock code="npm init -y" />
+                    </ListItem>
+                    <ListItem>Install dependencies for your application:
+                        <CodeBlock code={`npm install --save-dev typescript @types/node ts-node`} />
+                    </ListItem>
+                    <ListItem>Generate config file for TypeScript:
+                        <CodeBlock code={`npx tsc --init`} />
+                    </ListItem>
+                    <ListItem>
+                        Add the following configurations:
+                        <CodeBlock code={`{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "commonjs",
+    "target": "es2022",
+    "types": ["node"],
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
+    // and npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}`} />
+                    </ListItem>
+                    <ListItem>Create a src folder and index.ts file and add the following code:
+                        <CodeBlock code={`console.log("Hello, World!")`} />
+                    </ListItem>
+                    <ListItem>Run the application using 
+                        <CodeBlock code={`npx ts-node src/index.ts`} />
+                        <ul>
+                            <ListItem>This command runs the TypeScript file directly without needing to compile it to JavaScript first.</ListItem>
+                        </ul>
+                    </ListItem>
+
+                    <ListItem>
+                        You should see "Hello, World!" printed in the console, indicating that your Node.js application is running successfully.
+                    </ListItem>
+
+                    <ListItem>Another thing we can do is, create a build first & then run the compiled JavaScript file:
+                        <CodeBlock code={`npm run build`} />
+                        <CodeBlock code={`node dist/index.js`} />
+                    </ListItem>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Creating our First Express Server</h2>
                 <ul>
                     <ListItem>Create a new directory for your project:
                         <CodeBlock code="mkdir my-first-server" />
@@ -159,9 +247,9 @@ const BackendBasics = () => {
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
+    "module": "commonjs",
+    "target": "es2022",
+    "types": ["node"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -197,8 +285,7 @@ const BackendBasics = () => {
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
-}
-`} />
+}`} />
                     <ul>
                         <ListItem><span className="stress">outDir: </span>Specifies the output directory for compiled JavaScript files.</ListItem>
                         <ListItem><span className="stress">rootDir: </span>Specifies the root directory of your TypeScript source files.</ListItem>
