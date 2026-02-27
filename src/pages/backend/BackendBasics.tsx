@@ -1,6 +1,7 @@
 import ListItem from "src/common/ListItem";
 import EventLoop from "../../assets/async/eventLoop.png";
 import CodeBlock from "src/common/CodeBlock";
+import RepoLink from "src/common/RepoLink";
 
 const BackendBasics = () => {
     return (
@@ -206,6 +207,32 @@ const BackendBasics = () => {
                 </ul>
             </div>
 
+            {/* Modules in Node.js */}
+            <div>
+                <h2>Modules in Node.js</h2>
+
+                <p>Modules are reusable pieces of code that can be imported and exported between different files in a Node.js application.</p>
+
+                <ul>
+                    <ListItem>Modules help in organizing code, promoting code reusability, and maintaining a clean and modular codebase.</ListItem>
+                    <ListItem><span className="stress">fs (File System) module: </span>Provides an API for interacting with the file system, allowing you to read, write, and manipulate files.</ListItem>
+                    <ListItem><span className="stress">path module: </span>Provides utilities for working with file and directory paths, making it easier to handle file paths across different operating systems.</ListItem>
+                    <ListItem><span className="stress">http module: </span>Allows you to create HTTP servers and handle HTTP requests and responses, enabling you to build web applications and APIs.</ListItem>
+                </ul>
+
+                <ul>
+                    <ListItem>We have third party libraries that we can install and use in our applications:</ListItem>
+                    <ListItem><span className="stress">express: </span>A minimal and flexible Node.js web application framework.</ListItem>
+                    <ListItem><span className="stress">mongoose: </span>An ODM (Object Data Modeling) library for MongoDB and Node.js.</ListItem>
+                    <ListItem><span className="stress">chalk: </span>A library for styling console output with colors and styles.</ListItem>
+
+                    <ListItem>We can use NPM (Node Package Manager) to install and manage third-party libraries in our Node.js applications.</ListItem>
+                </ul>
+
+                <RepoLink link="https://github.com/gyanasluitel/node-modules-ops" name="Working with node modules" codeText="You can see working with different modules in: " />
+            </div>
+
+            {/* Creating First Server App */}
             <div>
                 <h2>Creating our First Express Server</h2>
                 <ul>
@@ -347,6 +374,441 @@ export default app;`} />
                         <ListItem>This code sets up a basic Express server that listens on port 4000 and logs a message when the server is running.</ListItem>
                     </ul>
                 </ListItem>
+            </div>
+
+            {/* REST API */}
+            <div>
+                <h2>REST API</h2>
+
+                <ul>
+                    <ListItem>REST (Representational State Transfer) is an architectural style for designing networked applications.</ListItem>
+                    <ListItem>It allows clients (frontend/mobile apps) to communicate with servers using HTTP.</ListItem>
+                </ul>
+
+                <div>
+                    <h3>REST Principles</h3>
+                    
+                    <div>
+                        <h4>Client-Server Architecture</h4>
+
+                        <ul>
+                            <ListItem>Client sends request</ListItem>
+                            <ListItem>Server responds response</ListItem>
+                            <ListItem>Separation of concerns</ListItem>
+                            <ListItem>Example:
+                                <ul>
+                                    <ListItem>React app --&gt; Client</ListItem>
+                                    <ListItem>Node/Express --&gt; Server</ListItem>
+                                </ul>
+                            </ListItem>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Statelessness</h4>
+                        <ul>
+                            <ListItem>Each request must contain all information needed to process it.</ListItem>
+                            <ListItem>The server does <span className="stress">NOT</span> remember previous requests.</ListItem>
+                            <ListItem><span className="stress">Example:</span>If authentication is required --&gt; token must be sent in every request.</ListItem>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Resource-Based URLs</h4>
+
+                        <ul>
+                            <ListItem>Everything is a <span className="stress">resource.</span></ListItem>
+                            <ListItem>Bad example:
+                                <CodeBlock code={`/getAllUsers`} />
+                            </ListItem>
+                            <ListItem>Good example:
+                                <CodeBlock code={`/users`} />
+                            </ListItem>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>HTTP Methods Define Actions</h4>
+                        <table className="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>Read data</td>
+                                </tr>
+
+                                <tr>
+                                    <td>POST</td>
+                                    <td>Create data</td>
+                                </tr>
+
+                                <tr>
+                                    <td>PUT</td>
+                                    <td>Update data</td>
+                                </tr>
+
+                                <tr>
+                                    <td>PATCH</td>
+                                    <td>Update data</td>
+                                </tr>
+
+                                <tr>
+                                    <td>DELETE</td>
+                                    <td>Remove data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            {/* HTTP Methods */}
+            <div>
+                <h2>HTTP Methods</h2>
+
+                {/* GET Method */}
+                <div>
+                    <h3>GET</h3>
+
+                    <ul>
+                        <ListItem>Used to retrieve data.</ListItem>
+
+                        <ListItem>Example:
+                            <CodeBlock code={`app.get('/users', (req, res) => {
+  res.json(users)
+})`} />
+                        </ListItem>
+                        <ListItem>No body</ListItem>
+                        <ListItem>Data usually sent via query or params</ListItem>
+                    </ul>
+                </div>
+
+                {/* POST Method */}
+                <div>
+                    <h3>POST</h3>
+                    <ul>
+                        <ListItem>Used to create new resource.</ListItem>
+                        <ListItem>Example:
+                            <CodeBlock code={`app.post('/users', (req, res) => {
+  const newUser = req.body
+  users.push(newUser)
+  res.json(newUser)
+})`} />
+                        </ListItem>
+                        <ListItem>Data sent in the request body</ListItem>
+                    </ul>
+                </div>
+
+                {/* PUT Method */}
+                <div>
+                    <h3>PUT</h3>
+                    <ul>
+                        <ListItem>Used to update the entire resource</ListItem>
+                        <ListItem>Example:
+                            <CodeBlock code={`app.put('/users/:id', (req, res) => {
+  // update logic
+})`} />
+                        </ListItem>
+                        <ListItem>Usually includes ID in request params</ListItem>
+                        <ListItem>Daa in body</ListItem>
+                    </ul>
+                </div>
+
+                {/* PATCH Method */}
+                <div>
+                    <h3>PATCH</h3>
+                    <ul>
+                        <ListItem>Used to update specific resource</ListItem>
+                        <ListItem>Example:
+                            <CodeBlock code={`app.patch('/users/:id', (req, res) => {
+  // update logic
+})`} />
+                        </ListItem>
+                        <ListItem>Usually includes ID in request params</ListItem>
+                        <ListItem>Data in body</ListItem>
+                    </ul>
+                </div>
+
+                {/* DELETE Method */}
+                <div>
+                    <h3>DELETE</h3>
+                    <ul>
+                        <ListItem>Removes resources</ListItem>
+                        <ListItem>Example:
+                            <CodeBlock code={`app.delete('/users/:id', (req, res) => {
+  // delete logic
+})`} />
+                        </ListItem>
+                    </ul>
+                </div>
+            </div>
+
+            {/* Request Lifecycle */}
+            <div>
+                <h2>Request Lifecycle</h2>
+
+                <ul>
+                    <ListItem>Client --&gt; Server --&gt; Controller --&gt; Logic --&gt; Response --&gt; Client</ListItem>
+                </ul>
+
+                <p className="stress">Step-by-Step Flow:</p>
+                <ol>
+                    <ListItem>Client sends HTTP request</ListItem>
+                    <ListItem>Express matches route</ListItem>
+                    <ListItem>Middleware runs</ListItem>
+                    <ListItem>Controller function executes</ListItem>
+                    <ListItem>Response sent back</ListItem>
+                </ol>
+
+                <p className="stress">Example: </p>
+                <ul>
+                    <ListItem>Code:
+                        <CodeBlock code={`app.get('/users/:id', (req, res) => {
+  const id = req.params.id
+  const user = users.find(u => u.id == id)
+  res.json(user)
+})`} />
+                    </ListItem>
+                    <ul>
+                        <ListItem>URL hit → <code className="code-block fw-600">/users/1</code></ListItem>
+                        <ListItem>Express matches route</ListItem>
+                        <ListItem><code className="code-block fw-600">req.params.id</code> extracted</ListItem>
+                        <ListItem>Data searched</ListItem>
+                        <ListItem>Response returned</ListItem>
+                    </ul>
+                </ul>
+            </div>
+
+            {/* Request Object */}
+            <div>
+                <h2>Request Object</h2>
+                <ul>
+                    <ListItem>In express, <CodeBlock code={`app.get('/', (req, res) => {})`} /></ListItem>
+                    <ListItem><span className="stress">req</span> contains all client information</ListItem>
+                </ul>
+
+                <div>
+                    <h3>req.params</h3>
+                    <ul>
+                        <ListItem>Used for URL variables</ListItem>
+                        <ListItem>Example: <CodeBlock code={`GET /users/10`} /></ListItem>
+                        <ListItem>Route: <CodeBlock code={`app.get('/users/:id', (req, res) => {
+  console.log(req.params.id)
+})`} /></ListItem>
+                        <ListItem>Output: 10</ListItem>
+                        <ListItem>Used when:
+                            <ul>
+                                <ListItem>Identifying specific resource</ListItem>
+                                <ListItem>ID-based routes</ListItem>
+                            </ul>
+                        </ListItem>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>req.query</h3>
+                    <ul>
+                        <ListItem>Used for filtering, searching, pagination</ListItem>
+                        <ListItem>Example: <CodeBlock code={`GET /users?age=25&city=ktm`} /></ListItem>
+                        <ListItem>Route: <CodeBlock code={`app.get('/users', (req, res) => {
+  console.log(req.query)
+})`} /></ListItem>
+                        <ListItem>Output: <CodeBlock code={`{ age: "25", city: "ktm" }`} /></ListItem>
+                        <ListItem>Used when:
+                            <ul>
+                                <ListItem>Filtering</ListItem>
+                                <ListItem>Sorting</ListItem>
+                                <ListItem>Pagination</ListItem>
+                                <ListItem>Optional values</ListItem>
+                            </ul>
+                        </ListItem>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>req.body</h3>
+                    <ul>
+                        <ListItem>Used to send data in POST/PUT/PATCH requests.</ListItem>
+                        <ListItem>It requires middleware to run: <CodeBlock code={`app.use(express.json())`}></CodeBlock></ListItem>
+                        <ListItem>Example: <CodeBlock code={`POST /users
+{
+  "name": "Ram",
+  "age": 25
+}`} /></ListItem>
+                        <ListItem>Route: <CodeBlock code={`app.post('/users', (req, res) => {
+  console.log(req.body)
+})`} /></ListItem>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>req.headers</h3>
+                    <ul>
+                        <ListItem>Contains metadata</ListItem>
+                        <ListItem>Example: <CodeBlock code={`console.log(req.headers.authorization)`} /></ListItem>
+                        <ListItem>Used for:
+                            <ul>
+                                <ListItem>Authentication tokens</ListItem>
+                                <ListItem>Content type</ListItem>
+                                <ListItem>API Keys</ListItem>
+                            </ul>
+                        </ListItem>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            {/* Middleware */}
+            <div>
+                <h2>Middleware</h2>
+
+                <div>
+                    <h3>What is Middleware?</h3>
+
+                    <p>Middleware is a function that has access to:</p>
+                    <ul>
+                        <ListItem>req (request object)</ListItem>
+                        <ListItem>res (response object)</ListItem>
+                        <ListItem>next (function to pass control)</ListItem>
+                    </ul>
+                    <p>It runs <span className="stress">between receiving a request and sending a response.</span></p>
+                </div>
+
+                <div>
+                    <h3>Visualizing Middleware in Request Lifecycle</h3>
+
+                    <p>Client --&gt; Middleware --&gt; Route Handler --&gt; Response</p>
+                    <p>Or mote accurately: </p>
+                    <p>Client --&gt; Middleware 1 --&gt; Middleware 2 --&gt; Middleware 3 --&gt; Route --&gt; Response</p>
+                </div>
+
+                <div>
+                    <h3>Basic Middleware Structure</h3>
+                    <CodeBlock code={`function middlewareName(req, res, next) {
+  // logic
+  next()
+}`} />
+                    <CodeBlock code={`app.use((req, res, next) => {
+  console.log("Middleware executed")
+  next()
+})`} />
+                </div>
+
+                <div>
+                    <h3>How Middleware Works Internally</h3>
+                    <p>When a request comes:
+                        <ListItem>Express checks all registered middleware</ListItem>
+                        <ListItem>Executes them in order</ListItem>
+                        <ListItem>If <code className="code-block fw-600">next()</code> is called → goes to next middleware</ListItem>
+                        <ListItem>If response is sent → cycle ends</ListItem>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>The next() Function</h3>
+                    <p>next() is a function that tells Express: <span className="stress">“Move to the next middleware in the stack.”</span></p>
+                    <p>If you <span className="stress">do not call next()</span>, the request will hang (unless you send a response).</p>
+
+                    <div>
+                        <h4>Example 1: Without next()</h4>
+                        <CodeBlock code={`app.use((req, res, next) => {
+  console.log("Hello")
+})`} />
+                        <p>❌ Request will hang because no next() and no response sent.</p>
+                    </div>
+                    
+                    <div>
+                        <h4>Example 2: With next()</h4>
+                        <CodeBlock code={`app.use((req, res, next) => {
+  console.log("Hello")
+  next()
+})`} />
+                        <p>✔️ Request continues.</p>
+                    </div>
+
+                    <div>
+                        <h3>Example 3: Ending Response (No next needed)</h3>
+                        <CodeBlock code={`app.use((req, res, next) => {
+  res.send("Stopped here")
+})`} />
+                        <p>Here next() is NOT needed because response is sent.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Types of Middleware in Express</h3>
+                    <p>Express supports several types:</p>
+                    <ol>
+                        <ListItem>Application-level middleware</ListItem>
+                        <ListItem>Router-level middlewares</ListItem>
+                        <ListItem>Built-in middleware</ListItem>
+                        <ListItem>Third-party middleware</ListItem>
+                        <ListItem>Error-handling middleware</ListItem>
+                    </ol>
+                </div>
+
+                <div>
+                    <h3>Application-Level Middleware</h3>
+
+                    <p>Registered using: <CodeBlock code={`app.use()`} /></p>
+
+                    <p>Example: <CodeBlock code={`app.use((req, res, next) => {
+  console.log("Time:", new Date())
+  next()
+})`} /></p>
+                    <p>This runs for <span className="stress">every request.</span></p>
+
+                    <div>
+                        <h4>Middleware for Specific Route</h4>
+
+                        <CodeBlock code={`app.use('/users', (req, res, next) => {
+  console.log("Users route accessed")
+  next()
+})`}  />
+                    <p className="stress">Only runs for routes starting with /users.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Built-in Middleware</h3>
+                    <p>Express provides built-in middleware.</p>
+
+                    <div>
+                        <h4>express.json()</h4>
+                        <p>Parses JSON body.</p>
+                        <CodeBlock code={`app.use(express.json())`} />
+                        <p>Without this:
+                            <CodeBlock code={`req.body // undefined`} />
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4>express.urlencoded()</h4>
+                        <p>Parses form data.</p>
+                        <CodeBlock code={`app.use(express.urlencoded({ extended: true }))`} />
+                    </div>
+
+                    <div>
+                        <h4>express.static()</h4>
+                        <p>Serves static files.</p>
+                        <CodeBlock code={`app.use(express.static('public'))`} />
+                        <p>If public folder contains:</p>
+                        <CodeBlock code={`public/index.html`} />
+                        <p>Accessible at:</p>
+                        <CodeBlock code={`http://localhost:3000/index.html`} />
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Custom Middleware</h3>
+                </div>
             </div>
         </div>
     )
